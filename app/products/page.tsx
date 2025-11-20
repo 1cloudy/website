@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CTA from "@/components/CTA";
 
 export default function ProductsPage() {
@@ -52,9 +53,8 @@ export default function ProductsPage() {
                             </div>
                         </div>
                         <div className="bg-muted/50 h-full min-h-[400px] flex items-center justify-center p-8">
-                            {/* Placeholder for product screenshot */}
-                            <div className="w-full max-w-md aspect-video bg-card rounded-lg shadow-2xl border border-border flex items-center justify-center text-muted-foreground">
-                                产品界面预览
+                            <div className="w-full max-w-md aspect-video relative rounded-lg shadow-2xl border border-border overflow-hidden">
+                                <Image src="/images/product-data-suite.png" alt="Data Intelligence Suite" fill className="object-cover" />
                             </div>
                         </div>
                     </div>
@@ -95,9 +95,8 @@ export default function ProductsPage() {
                             </div>
                         </div>
                         <div className="lg:order-1 bg-muted/50 h-full min-h-[400px] flex items-center justify-center p-8">
-                            {/* Placeholder for product screenshot */}
-                            <div className="w-full max-w-md aspect-video bg-card rounded-lg shadow-2xl border border-border flex items-center justify-center text-muted-foreground">
-                                产品界面预览
+                            <div className="w-full max-w-md aspect-video relative rounded-lg shadow-2xl border border-border overflow-hidden">
+                                <Image src="/images/product-customer-service.png" alt="Smart Customer Service" fill className="object-cover" />
                             </div>
                         </div>
                     </div>
@@ -138,9 +137,8 @@ export default function ProductsPage() {
                             </div>
                         </div>
                         <div className="bg-muted/50 h-full min-h-[400px] flex items-center justify-center p-8">
-                            {/* Placeholder for product screenshot */}
-                            <div className="w-full max-w-md aspect-video bg-card rounded-lg shadow-2xl border border-border flex items-center justify-center text-muted-foreground">
-                                产品界面预览
+                            <div className="w-full max-w-md aspect-video relative rounded-lg shadow-2xl border border-border overflow-hidden">
+                                <Image src="/images/product-visual-inspection.png" alt="Visual Inspection Pro" fill className="object-cover" />
                             </div>
                         </div>
                     </div>
