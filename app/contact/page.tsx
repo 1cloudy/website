@@ -1,6 +1,17 @@
-import { Mail, MapPin, Phone } from "lucide-react";
+'use client';
+
+import { Mail, MapPin, Phone, Loader2 } from "lucide-react";
+import { useActionState } from "react";
+import { submitContact } from "@/app/actions/contact";
+
+const initialState = {
+    message: '',
+    success: false,
+}
 
 export default function ContactPage() {
+    const [state, formAction, isPending] = useActionState(submitContact, initialState);
+
     return (
         <div className="bg-background text-foreground min-h-screen">
             {/* Hero Section */}
@@ -19,13 +30,14 @@ export default function ContactPage() {
                     {/* Contact Form */}
                     <div className="bg-card border border-border rounded-2xl p-8 shadow-sm">
                         <h2 className="text-2xl font-bold mb-6">发送消息</h2>
-                        <form className="space-y-6">
+                        <form action={formAction} className="space-y-6">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <div className="space-y-2">
                                     <label htmlFor="firstName" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">名字</label>
                                     <input
                                         type="text"
                                         id="firstName"
+                                        name="firstName"
                                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                         placeholder="张"
                                     />
@@ -35,6 +47,7 @@ export default function ContactPage() {
                                     <input
                                         type="text"
                                         id="lastName"
+                                        name="lastName"
                                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                         placeholder="三"
                                     />
@@ -46,6 +59,8 @@ export default function ContactPage() {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
+                                    required
                                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="zhangsan@company.com"
                                 />
@@ -56,6 +71,7 @@ export default function ContactPage() {
                                 <input
                                     type="text"
                                     id="company"
+                                    name="company"
                                     className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                                     placeholder="您的公司"
                                 />
@@ -65,15 +81,34 @@ export default function ContactPage() {
                                 <label htmlFor="message" className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">如何帮助您？</label>
                                 <textarea
                                     id="message"
+                                    name="message"
+                                    required
                                     rows={5}
                                     className="flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none"
                                     placeholder="请简要描述您的项目需求..."
                                 />
                             </div>
 
-                            <button className="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2">
-                                发送消息
+                            <button
+                                type="submit"
+                                disabled={isPending}
+                                className="w-full inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                            >
+                                {isPending ? (
+                                    <>
+                                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                                        发送中...
+                                    </>
+                                ) : (
+                                    '发送消息'
+                                )}
                             </button>
+
+                            {state.message && (
+                                <div className={`p-4 rounded-md ${state.success ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'}`}>
+                                    {state.message}
+                                </div>
+                            )}
                         </form>
                     </div>
 
