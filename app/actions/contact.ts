@@ -1,12 +1,15 @@
 'use server'
 
+import { appendToSheet } from '@/lib/google-sheets';
+
 export async function submitContact(prevState: any, formData: FormData) {
     const rawFormData = {
-        firstName: formData.get('firstName'),
-        lastName: formData.get('lastName'),
-        email: formData.get('email'),
-        company: formData.get('company'),
-        message: formData.get('message'),
+        firstName: formData.get('firstName') as string,
+        lastName: formData.get('lastName') as string,
+        email: formData.get('email') as string,
+        company: formData.get('company') as string,
+        message: formData.get('message') as string,
+        date: new Date().toISOString(),
     }
 
     // Basic validation
@@ -14,14 +17,20 @@ export async function submitContact(prevState: any, formData: FormData) {
         return { message: '请填写必要信息 (邮箱和消息)', success: false }
     }
 
-    // Simulate email sending (Log to server console)
+    // Log to server console
     console.log('------------------------------------------------')
     console.log('New Contact Form Submission:')
     console.log(rawFormData)
     console.log('------------------------------------------------')
 
-    // Simulate network delay
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Save to Google Sheets
+    const sheetSuccess = await appendToSheet(rawFormData);
+
+    if (!sheetSuccess) {
+        console.log('Failed to save to Google Sheet (check credentials)');
+    } else {
+        console.log('Saved to Google Sheet successfully');
+    }
 
     return { message: '消息已发送！我们会尽快与您联系。', success: true }
 }
