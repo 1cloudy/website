@@ -25,18 +25,13 @@ export default function Hero() {
 
                 <div className="mt-20">
                     <p className="text-sm text-muted-foreground uppercase tracking-widest mb-6">深受前瞻性企业信赖</p>
-                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
-                        <Image src="/images/logo-1.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
+                    <div className="flex flex-wrap justify-center gap-12 items-center">
+                        <span className="text-xl font-bold text-muted-foreground/80 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default">ACME Corp</span>
+                        <span className="text-xl font-bold text-muted-foreground/80 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default">Quantum AI</span>
+                        <span className="text-xl font-bold text-muted-foreground/80 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default">Echo Systems</span>
+                        <span className="text-xl font-bold text-muted-foreground/80 hover:text-primary hover:scale-110 transition-all duration-300 cursor-default">Terra Firma</span>
                     </div>
-                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
-                        <Image src="/images/logo-2.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
-                    </div>
-                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
-                        <Image src="/images/logo-3.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
-                    </div>
-                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
-                        <Image src="/images/logo-4.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
-                    </div>
+
                 </div>
             </div>
 
