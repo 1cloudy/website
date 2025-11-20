@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CTA from "@/components/CTA";
 
 export default function BlogPage() {
@@ -21,8 +22,8 @@ export default function BlogPage() {
                     {/* Post 1 */}
                     <div className="group cursor-pointer">
                         <div className="rounded-2xl overflow-hidden mb-4 border border-border">
-                            <div className="aspect-[4/3] bg-muted hover:scale-105 transition-transform duration-300 flex items-center justify-center text-muted-foreground">
-                                文章配图
+                            <div className="aspect-[4/3] relative bg-muted hover:scale-105 transition-transform duration-300">
+                                <Image src="/images/blog-engineering.png" alt="AI Engineering" fill className="object-cover" />
                             </div>
                         </div>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
@@ -35,7 +36,9 @@ export default function BlogPage() {
                             随着 AI 技术的成熟，重点正在从模型开发转向系统工程。本文探讨了构建可靠、可扩展 AI 系统所需的关键原则和实践。
                         </p>
                         <div className="mt-4 flex items-center">
-                            <div className="w-8 h-8 bg-muted rounded-full mr-2"></div>
+                            <div className="relative w-8 h-8 mr-2 rounded-full overflow-hidden">
+                                <Image src="/images/avatar-1.png" alt="Author" fill className="object-cover" />
+                            </div>
                             <span className="text-sm font-medium">张三, 首席架构师</span>
                         </div>
                     </div>
@@ -43,8 +46,8 @@ export default function BlogPage() {
                     {/* Post 2 */}
                     <div className="group cursor-pointer">
                         <div className="rounded-2xl overflow-hidden mb-4 border border-border">
-                            <div className="aspect-[4/3] bg-muted hover:scale-105 transition-transform duration-300 flex items-center justify-center text-muted-foreground">
-                                文章配图
+                            <div className="aspect-[4/3] relative bg-muted hover:scale-105 transition-transform duration-300">
+                                <Image src="/images/blog-team.png" alt="Team Building" fill className="object-cover" />
                             </div>
                         </div>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
@@ -57,7 +60,9 @@ export default function BlogPage() {
                             招聘数据科学家是不够的。了解如何构建跨职能团队，融合数据科学、工程和产品思维，以交付真正的商业价值。
                         </p>
                         <div className="mt-4 flex items-center">
-                            <div className="w-8 h-8 bg-muted rounded-full mr-2"></div>
+                            <div className="relative w-8 h-8 mr-2 rounded-full overflow-hidden">
+                                <Image src="/images/avatar-2.png" alt="Author" fill className="object-cover" />
+                            </div>
                             <span className="text-sm font-medium">李四, 运营总监</span>
                         </div>
                     </div>
@@ -65,8 +70,8 @@ export default function BlogPage() {
                     {/* Post 3 */}
                     <div className="group cursor-pointer">
                         <div className="rounded-2xl overflow-hidden mb-4 border border-border">
-                            <div className="aspect-[4/3] bg-muted hover:scale-105 transition-transform duration-300 flex items-center justify-center text-muted-foreground">
-                                文章配图
+                            <div className="aspect-[4/3] relative bg-muted hover:scale-105 transition-transform duration-300">
+                                <Image src="/images/blog-ethics.png" alt="AI Ethics" fill className="object-cover" />
                             </div>
                         </div>
                         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
@@ -79,7 +84,9 @@ export default function BlogPage() {
                             如何在不牺牲创新的前提下确保 AI 系统的公平性和透明度？我们分享了在实际项目中实施负责任 AI 的经验教训。
                         </p>
                         <div className="mt-4 flex items-center">
-                            <div className="w-8 h-8 bg-muted rounded-full mr-2"></div>
+                            <div className="relative w-8 h-8 mr-2 rounded-full overflow-hidden">
+                                <Image src="/images/avatar-3.png" alt="Author" fill className="object-cover" />
+                            </div>
                             <span className="text-sm font-medium">王五, AI 伦理专家</span>
                         </div>
                     </div>

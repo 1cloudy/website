@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
@@ -24,12 +25,17 @@ export default function Hero() {
 
                 <div className="mt-20">
                     <p className="text-sm text-muted-foreground uppercase tracking-widest mb-6">深受前瞻性企业信赖</p>
-                    <div className="flex flex-wrap justify-center gap-8 opacity-50 grayscale dark:invert-0 invert">
-                        {/* Placeholders for logos */}
-                        <div className="h-8 w-24 bg-muted-foreground/20 rounded"></div>
-                        <div className="h-8 w-24 bg-muted-foreground/20 rounded"></div>
-                        <div className="h-8 w-24 bg-muted-foreground/20 rounded"></div>
-                        <div className="h-8 w-24 bg-muted-foreground/20 rounded"></div>
+                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
+                        <Image src="/images/logo-1.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
+                    </div>
+                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
+                        <Image src="/images/logo-2.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
+                    </div>
+                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
+                        <Image src="/images/logo-3.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
+                    </div>
+                    <div className="relative h-12 w-32 opacity-50 hover:opacity-100 transition-opacity">
+                        <Image src="/images/logo-4.png" alt="Partner Logo" fill className="object-contain invert dark:invert-0" />
                     </div>
                 </div>
             </div>

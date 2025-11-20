@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CTA from "@/components/CTA";
 
 export default function AboutPage() {
@@ -31,8 +32,8 @@ export default function AboutPage() {
                             </p>
                         </div>
                     </div>
-                    <div className="bg-muted rounded-2xl aspect-square flex items-center justify-center text-muted-foreground">
-                        团队合影占位符
+                    <div className="relative aspect-square rounded-2xl overflow-hidden">
+                        <Image src="/images/team-photo.png" alt="Ln2ai Team" fill className="object-cover" />
                     </div>
                 </div>
             </section>

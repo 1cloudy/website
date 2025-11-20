@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import CTA from "@/components/CTA";
 
 export default function PortfolioPage() {
@@ -20,8 +21,8 @@ export default function PortfolioPage() {
 
                     {/* Project 1 */}
                     <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-colors">
-                        <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground">
-                            项目封面图
+                        <div className="aspect-video relative bg-muted">
+                            <Image src="/images/portfolio-retail.png" alt="Retail Project" fill className="object-cover" />
                         </div>
                         <div className="p-8">
                             <div className="text-sm text-blue-500 font-medium mb-2">零售 & 电商</div>
@@ -38,8 +39,8 @@ export default function PortfolioPage() {
 
                     {/* Project 2 */}
                     <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-colors">
-                        <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground">
-                            项目封面图
+                        <div className="aspect-video relative bg-muted">
+                            <Image src="/images/portfolio-fintech.png" alt="Fintech Project" fill className="object-cover" />
                         </div>
                         <div className="p-8">
                             <div className="text-sm text-purple-500 font-medium mb-2">金融科技</div>
@@ -56,8 +57,8 @@ export default function PortfolioPage() {
 
                     {/* Project 3 */}
                     <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-colors">
-                        <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground">
-                            项目封面图
+                        <div className="aspect-video relative bg-muted">
+                            <Image src="/images/portfolio-medical.png" alt="Medical Project" fill className="object-cover" />
                         </div>
                         <div className="p-8">
                             <div className="text-sm text-green-500 font-medium mb-2">医疗健康</div>
@@ -74,8 +75,8 @@ export default function PortfolioPage() {
 
                     {/* Project 4 */}
                     <div className="group relative rounded-2xl overflow-hidden bg-card border border-border hover:border-primary/50 transition-colors">
-                        <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground">
-                            项目封面图
+                        <div className="aspect-video relative bg-muted">
+                            <Image src="/images/portfolio-logistics.png" alt="Logistics Project" fill className="object-cover" />
                         </div>
                         <div className="p-8">
                             <div className="text-sm text-orange-500 font-medium mb-2">物流与供应链</div>
