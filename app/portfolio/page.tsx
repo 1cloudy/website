@@ -100,7 +100,7 @@ export default function PortfolioPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="bg-card p-8 rounded-2xl border border-border">
                             <div className="flex text-yellow-500 mb-4">★★★★★</div>
-                            <p className="text-muted-foreground mb-6">"Dextar 团队不仅技术过硬，而且深刻理解业务。他们交付的不仅仅是代码，而是真正的商业价值。"</p>
+                            <p className="text-muted-foreground mb-6">"Ln2ai 团队不仅技术过硬，而且深刻理解业务。他们交付的不仅仅是代码，而是真正的商业价值。"</p>
                             <div className="flex items-center">
                                 <div className="w-10 h-10 bg-muted rounded-full mr-3"></div>
                                 <div>
@@ -111,7 +111,7 @@ export default function PortfolioPage() {
                         </div>
                         <div className="bg-card p-8 rounded-2xl border border-border">
                             <div className="flex text-yellow-500 mb-4">★★★★★</div>
-                            <p className="text-muted-foreground mb-6">"与 Dextar 的合作是我们数字化转型中最正确的决定。他们的 AI 战略规划为我们指明了方向。"</p>
+                            <p className="text-muted-foreground mb-6">"与 Ln2ai 的合作是我们数字化转型中最正确的决定。他们的 AI 战略规划为我们指明了方向。"</p>
                             <div className="flex items-center">
                                 <div className="w-10 h-10 bg-muted rounded-full mr-3"></div>
                                 <div>

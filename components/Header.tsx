@@ -8,7 +8,7 @@ export default function Header() {
                 <div className="flex items-center justify-between h-16">
                     <div className="flex-shrink-0">
                         <Link href="/" className="text-foreground font-bold text-xl tracking-tighter">
-                            Dextar
+                            Ln2ai
                         </Link>
                     </div>
                     <div className="hidden md:block">

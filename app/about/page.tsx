@@ -7,7 +7,7 @@ export default function AboutPage() {
             {/* Hero Section */}
             <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center">
                 <h1 className="text-4xl sm:text-6xl font-bold tracking-tight mb-6">
-                    关于 Dextar
+                    关于 Ln2ai
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                     我们是一群工程师、研究人员和战略家，致力于构建 AI 的未来。
@@ -21,7 +21,7 @@ export default function AboutPage() {
                         <h2 className="text-3xl font-bold mb-6">我们的故事</h2>
                         <div className="space-y-4 text-lg text-muted-foreground">
                             <p>
-                                Dextar 成立于 2020 年，当时我们观察到一个普遍现象：许多企业在 AI 实验上投入巨大，但很少能将模型转化为产生实际价值的生产系统。
+                                Ln2ai 成立于 2020 年，当时我们观察到一个普遍现象：许多企业在 AI 实验上投入巨大，但很少能将模型转化为产生实际价值的生产系统。
                             </p>
                             <p>
                                 我们看到了"演示软件"和"生产软件"之间的巨大鸿沟。我们的使命就是填补这一鸿沟。

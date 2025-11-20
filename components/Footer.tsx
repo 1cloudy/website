@@ -51,9 +51,9 @@ export default function Footer() {
                 </div>
 
                 <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-2xl font-bold tracking-tighter">Dextar</div>
+                    <div className="text-2xl font-bold tracking-tighter">Ln2ai</div>
                     <div className="text-muted-foreground text-sm">
-                        © 2025 Dextar. 为未来而建。
+                        © 2025 Ln2ai. 为未来而建。
                     </div>
                 </div>
             </div>

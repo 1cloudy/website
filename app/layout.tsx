@@ -8,7 +8,7 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Dextar - 面向未来的 AI 工程",
+  title: "Ln2ai - 面向未来的 AI 工程",
   description: "我们构建生产就绪的 AI 系统，改变企业的运营方式。",
 };
 
